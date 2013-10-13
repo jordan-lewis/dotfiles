@@ -6,6 +6,8 @@ alias .....="cd ../../../.."
 alias ~="cd ~" # `cd` is probably faster to type though
 alias -- -="cd -"
 
+
+
 # Shortcuts
 alias d="cd ~/Documents/Dropbox"
 alias dl="cd ~/Downloads"
@@ -14,6 +16,27 @@ alias p="cd ~/Projects"
 alias g="git"
 alias h="history"
 alias j="jobs"
+
+
+
+#Git
+alias gl='git l'
+# alias gl='git log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --'
+alias gfo='git fetch origin'
+alias grb='git rebase -p'
+alias gco='git checkout'
+alias gm='git merge'
+alias gst='git status'
+alias gc='git commit'
+alias gup='git smart-pull'
+git_current_branch() {
+  git symbolic-ref HEAD 2> /dev/null | sed -e 's/refs\/heads\///'
+}
+alias gpull='git pull origin `git_current_branch`'
+alias gpush='git push origin `git_current_branch`'
+
+
+
 
 # Middleman
 alias mms='bundle exec middleman server'
