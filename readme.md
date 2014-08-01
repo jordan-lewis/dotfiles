@@ -1,4 +1,5 @@
-To install
+### Setup
+Clone to `~/src/dot-files`
 
-Clone to `~dotfiles`
-Then run `./install.sh`
+### Create symlink
+ln -s ~/src/dot-files/.zshrc ~/.zshrc

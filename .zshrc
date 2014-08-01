@@ -83,6 +83,8 @@ bindkey '^[[3~' delete-char
 bindkey '^[^N' newtab
 bindkey '^?' backward-delete-char
 
+alias shit='SHIT'
+
 typeset -A key
 
 # expand functions in the prompt
