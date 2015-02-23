@@ -26,7 +26,6 @@ source ${HOME}/.zshenv
 source ${ZSH}/oh-my-zsh.sh
 
 
-
 function dbm() {
   bundle exec rake db:migrate
   bundle exec rake db:test:prepare
@@ -66,4 +65,4 @@ alias sshci="ssh ci-public"
 alias va="~/src/toolbox/gpg/scripts/view_asset"
 alias zr="zeus rspec"
 alias zt="zeus test"
-alias bb="git buildbox"
+alias bb="git buildkite"
