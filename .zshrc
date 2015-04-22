@@ -42,6 +42,13 @@ function bil() {
   bundle exec spring binstub --all
 }
 
+function boxenate() {
+  cd ~/src/our-boxen &&
+  git pull &&
+  bundle install --local &&
+  boxen --debug --stealth
+}
+
 alias be="bundle exec"
 alias bec="bundle exec cucumber"
 alias fa="alias -p | grep"
