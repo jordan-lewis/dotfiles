@@ -25,6 +25,11 @@ plugins=(
 source ${HOME}/.zshenv
 source ${ZSH}/oh-my-zsh.sh
 
+#  kill any processes that are turned up by a `ps aux  | grep {your argument here}`
+function snipe_processes() {
+  selector=$1
+  kill -9 `ps aux | grep $selector | grep -v grep | awk '{print $2}'`
+}
 
 function dbm() {
   bundle exec rake db:migrate
