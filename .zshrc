@@ -22,7 +22,7 @@ plugins=(
 )
 
 
-source ${HOME}/.zshenv
+# source ${HOME}/.zshenv
 source ${ZSH}/oh-my-zsh.sh
 
 #  kill any processes that are turned up by a `ps aux  | grep {your argument here}`
@@ -78,3 +78,8 @@ alias va="~/src/toolbox/gpg/scripts/view_asset"
 alias zr="zeus rspec"
 alias zt="zeus test"
 alias bb="git buildkite"
+
+# docker-osx-dev
+export DOCKER_CERT_PATH=/Users/jordanlewiz/.boot2docker/certs/boot2docker-vm
+export DOCKER_TLS_VERIFY=1
+export DOCKER_HOST=tcp://192.168.59.103:2376
